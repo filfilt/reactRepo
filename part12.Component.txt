@@ -1,0 +1,32 @@
+Part11.Component
+ ---------------
+Components let you split the i7i into independent,
+reusable pieces, and think about each piece in isolation.
+When building your React application you will have
+many different components that make up your React
+application. Some will likely have state changes and may
+even have to access your backend. Other components
+may just render a piece of your UI with access to props
+to render successfully.
+-------------/-------------------------
+    State full component
+The above is an example of a
+stateful component, why? Three
+things,
+1. we first initialize state,
+2. secondly we have methods on
+our constructor, and lastly
+3. we setState within our
+handleChange method.
+These are three critical pieces of a
+stateful component.
+--------------/----------------
+	Stateless component
+This is stateless component, its just simply returning a p tag that will have the
+value of our input as we type.
+*It is not setting any state,
+*there are no methods.
+This is a great way to keep your react code maintainable and readable. Breaking
+it up into smaller components and passing props to child components. We export
+this component and include it is the parent component. Its only job is to display the
+value from the input.
