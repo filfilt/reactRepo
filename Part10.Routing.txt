@@ -1,0 +1,37 @@
+Part10. Routing
+   -----------
+npm install react-router-dom
+Open App.js and include the name space as
+
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+- Create app.routing.ts file under app folder
+Add the following line of Code:
+<Router>
+<Route path="/" component={BodyComponent}></Route>
+<Route path="/contactus" component={ContactUsComponent}></Route>
+<Route path="/aboutus" component={AboutUsComponent}></Route>
+</Router>
+Create about us, home, contact us and history comopnent
+------------------------------/--------------------------
+
+install:
+	npm install react-router-dom
+	clean body from App.js
+        add: import {BrowserRouter as Router, Route} from 'react-router-dom'
+Pages:First create folder "pages" under src then create
+	Homecomponent.js
+	AboutComponent.js
+	ContactUsComponent.js
+	HitoryComponent.js  --> follow the previous method
+under App.js: and under nav
+---------
+
+<Router>
+<Route path="/" component={Homecomponent}></Route>
+<Route path="/aboutus" component={AboutUsComponent}></Route>
+<Route path="/contactus" component={ContactUsComponent}></Route>
+<Route path="/history" component={HistoryComponen></Route>
+</Router> 
+
+	
