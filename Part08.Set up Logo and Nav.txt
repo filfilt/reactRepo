@@ -1,0 +1,17 @@
+ Part08.Set up Logo and Nav
+  -----------------------
+* Creating Logo
+* Creating Menu
+* Change Lookand Feel
+* Adding Bootstrap
+* Adding Font Awesome
+* Adding components
+* Routing
+-------------/---------
+Logo: <img src="http://localhost:3000/logo.png"></img>
+Nav: bootswatch.com ->uniyed->copy Emmbed <> then paste it at the place of <div>NavComponent</div>
+     npm install bootswatch
+     npm install bootstrap font-awesome jquery --save
+index.css: import them
+	import '../bootstrap/dist/css/bootstrap.min.css';
+	import '../bootswatch/dist/united/bootswatch.min.css';
