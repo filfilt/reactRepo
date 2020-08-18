@@ -28,7 +28,7 @@ under App.js: and under nav
 ---------
 
 <Router>
-<Route path="/" component={Homecomponent}></Route>
+<Route path="/" component={Homecomponent} exact></Route>
 <Route path="/aboutus" component={AboutUsComponent}></Route>
 <Route path="/contactus" component={ContactUsComponent}></Route>
 <Route path="/history" component={HistoryComponen></Route>
