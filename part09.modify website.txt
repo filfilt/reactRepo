@@ -1,0 +1,21 @@
+part09.modify website
+-------------------
+* change olde website name
+*Home
+*About Us
+*Contact Ua
+*History
+Footer:
+	instead of <div>footer</div> put  <div>Copyright @2019</div>
+Styles:
+	Under src create style folder for all css
+	under is create SMSStyle
+	.footer{
+	color : white;
+	background-color:gry
+	}
+	.bodyhieght{
+	min-heightt:120px;  =>change <div>body</div>  to <div className="bodyhieght">body</div>
+	}
+under App.js:
+	import '../src/style/SMSStyle.css' after this change <div>Copyright @2019</div> to <div className="footer">Copyright @2019</div>
