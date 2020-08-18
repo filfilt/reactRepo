@@ -1,0 +1,17 @@
+Part03.Set up Environment
+       =================
+In this chapter, we wIA discuss the Environment Setup
+requ Wed for reactjs. To install reactjs, we require the
+flowing
+* nodeJs
+* npm
+* creating react up
+* IDE for writing your code
+
+code:
+- create one folder in c
+- open cmd
+- npm install -g creat-react-app
+- creat-react-app myR
+- cd myR
+- yarn start / npm start  =>localhost:3000  opend in other page
