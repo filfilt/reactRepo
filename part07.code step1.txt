@@ -1,0 +1,30 @@
+code steps:
+=========
+- create folder in c:\
+- open cmd
+- create-react-app myspa
+- cd myspa
+- yarnstart/npm start
+- code .
+- npm start
+* Create "Components" folder
+	- LogoComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>LogoComponent</div>
+		*<LogoComponent></LogoComponent>  in app.js
+- NavComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>NavComponent</div>
+		*<NavComponent></NavComponent>  in app.js
+- BodyComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>BodyComponent</div>
+		*<BodyComponent></BodyComponent>  in app.js
+- FooterComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>FooterComponent</div>
+		*<FooterComponent></FooterComponent>  in app.js
