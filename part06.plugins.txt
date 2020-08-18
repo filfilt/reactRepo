@@ -1,0 +1,26 @@
+Part06.plugins
+ ------------
+1.Install React-Native/Redux Snippets for es6/es7    Then you can do imr to do
+
+import React from 'react';
+And imrc to do:
+
+import React,{component } from 'react';
+
+Slr: to do:
+const NavComponent = () =>{
+return (
+);
+}
+export default NavComponent;
+- select all codes
+- Ctr + Sht + P
+- React pure   =>for this purpose add the ff React pure plugin
+-----------------/-----------------------
+2. React Pure to Class This is Component to convert stateless Component to Class
+	a.Now go to your functional component
+	b.Select the functional component
+	c.Type shift + P and select >React pure to class
+	d.It will convert to class component
+3.JavaScript(ES6) code snippet
+4. import cost
