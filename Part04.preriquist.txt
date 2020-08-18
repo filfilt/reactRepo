@@ -1,0 +1,20 @@
+Part4. preriquist:      It is single html code
+--------/-----------
+If you want to work with ReactJS, you need to have solid
+knowledge of JavaScript, HTML5, and CSS. Even though ReactiS
+doesn’t use HTML, the JSX is similar so your HTML knowledge will
+be very helpful. We will explain this more in one of the next
+chapters. We will also use EcmaScript 2015 syntax so any
+knowledge in this area can be helpful.
+-------------------/------------------------
+=> lnstaEl Recat
+	* npm install -g create-react-app
+=>reate the application
+	* Create-react-app appname (do not use Capital Letter)
+=> Start it by using:
+	* yarn start or
+	* npm start
+
+**Ctr + C     and npm start
+
+*App.js: contains back code
