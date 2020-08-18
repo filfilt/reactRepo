@@ -8,8 +8,8 @@ part05.Structure of reactJs
 
 HTML:
 	open it and delete any comments
-Relatin:
+Relation:
 	App.js ->app->index.js then index.js->root->index.html
-	newConp -><newComp></newComp>->App.js ->app->index.js then index.js->root->index.html
+	newComp -><newComp></newComp>->App.js ->app->index.js ->root->index.html
 If we have more than one components we need folder(called components)
 	

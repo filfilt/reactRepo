@@ -7,7 +7,7 @@ be very helpful. We will explain this more in one of the next
 chapters. We will also use EcmaScript 2015 syntax so any
 knowledge in this area can be helpful.
 -------------------/------------------------
-=> lnstaEl Recat
+=> lnstall React
 	* npm install -g create-react-app
 =>reate the application
 	* Create-react-app appname (do not use Capital Letter)

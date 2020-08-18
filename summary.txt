@@ -1,0 +1,123 @@
+Summary:
+code:
+P3:
+- create one folder in c
+- open cmd
+- npm install -g create-react-app
+- create-react-app helloworld
+- cd helloworld
+- yarn start / npm start  =>localhost:3000  opend in other page
+
+P4:
+=> Start it by using:
+	* yarn start or
+	* npm start
+
+**Ctr + C     and npm start
+
+*App.js: contains back code
+
+P5:
+HTML:
+	open it and delete any comments
+Relation:
+	App.js ->app->index.js then index.js->root->index.html
+	newComp -><newComp></newComp>->App.js ->app->index.js ->root->index.html
+If we have more than one components we need folder(called components)
+
+P6: Plugin
+- React-Native
+- import React
+- Slr
+- React Pure
+- JavaScript(ES6) code snippet
+- import cost
+----------------------------
+P6:
+* Create "Components" folder
+	- LogoComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>LogoComponent</div>
+		*<LogoComponent></LogoComponent>  in app.js
+- NavComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>NavComponent</div>
+		*<NavComponent></NavComponent>  in app.js
+- BodyComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>BodyComponent</div>
+		*<BodyComponent></BodyComponent>  in app.js
+- FooterComponent.js
+		*impo
+		*Slr  then select all =>react pure
+		*<div>FooterComponent</div>
+		*<FooterComponent></FooterComponent>  in app.js
+------------------------------------------/------------------------------
+P8:
+Logo: <img src="http://localhost:3000/logo.png"></img>
+Nav: bootswatch.com ->uniyed->copy Emmbed <> then paste it at the place of <div>NavComponent</div>
+     npm install bootswatch
+     npm install bootstrap font-awesome jquery --save
+index.css: import them
+	import '../bootstrap/dist/css/bootstrap.min.css';
+	import '../bootswatch/dist/united/bootswatch.min.css';
+-------------------------------------/----------------------
+P9:
+* change olde website name
+*Home
+*About Us
+*Contact Ua
+*History
+Footer:
+	instead of <div>footer</div> put  <div>Copyright @2019</div>
+Styles:
+	Under src create style folder for all css
+	under is create SMSStyle
+	.footer{
+	color : white;
+	background-color:gry
+	}
+	.bodyhieght{
+	min-heightt:120px;  =>change <div>body</div>  to <div className="bodyhieght">body</div>
+	}
+under App.js:
+	import '../src/style/SMSStyle.css' after this change <div>Copyright @2019</div> to <div className="footer">Copyright @2019</div>
+------------------------------------------/--------------------------------------------------
+P10:
+npm install react-router-dom
+Open App.js and include the name space as
+
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+- Create app.routing.ts file under app folder
+Add the following line of Code:
+<Router>
+<Route path="/" component={BodyComponent}></Route>
+<Route path="/contactus" component={ContactUsComponent}></Route>
+<Route path="/aboutus" component={AboutUsComponent}></Route>
+</Router>
+Create about us, home, contact us and history comopnent
+------------------------------/--------------------------
+
+install:
+	npm install react-router-dom
+	clean body from App.js
+        add: import {BrowserRouter as Router, Route} from 'react-router-dom'
+Pages:First create folder "pages" under src then create
+	Homecomponent.js
+	AboutComponent.js
+	ContactUsComponent.js
+	HitoryComponent.js  --> follow the previous method
+under App.js: and under nav
+---------
+
+<Router>
+<Route path="/" component={Homecomponent} exact></Route>
+<Route path="/aboutus" component={AboutUsComponent}></Route>
+<Route path="/contactus" component={ContactUsComponent}></Route>
+<Route path="/history" component={HistoryComponen></Route>
+</Router> 
+-----------------------------------/-----------------------
