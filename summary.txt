@@ -21,22 +21,23 @@ P5:
 HTML:
 	open it and delete any comments
 Relation:
-	App.js ->app->index.js then index.js->root->index.html
+	App.js ->app->index.js then index.js->root->index.html =>it display to browser
 	newComp -><newComp></newComp>->App.js ->app->index.js ->root->index.html
 If we have more than one components we need folder(called components)
 
 P6: Plugin
 - React-Native
+* imrc
 - import React
-- Slr
+*Slr
 - React Pure
 - JavaScript(ES6) code snippet
 - import cost
 ----------------------------
 P6:
-* Create "Components" folder
+* Create "Components" folder   NB: cancel the header part from App.js
 	- LogoComponent.js
-		*impo
+		*imrc
 		*Slr  then select all =>react pure
 		*<div>LogoComponent</div>
 		*<LogoComponent></LogoComponent>  in app.js

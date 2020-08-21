@@ -1,0 +1,46 @@
+Angular Material Navbar Toolbar Angular Routing: https://www.youtube.com/watch?v=ADEZTrIxj1k&t=634s
+---------------------------------------------/--------------------------------------------
+-Create:        Folder
+-install:       npm install -g @angular/cli
+-Open:          Vs code
+-CreateProject: ng new ProjectName
+1.Creating:
+  ========
+-Routing:       yes
+-Css:           yes
+-Goto Project:  cd ProjectName
+-install:       ng add @angular/material
+-Select:        Indigo pink
+-Ans:           yes , yes
+-generate navbar: ng g c navbar
+
+-OpenBrowser:   ng serve  =>4200
+------------------/---------------------
+2.app.component.html:
+   ============
+	*delete:		premade code
+	*put: 			<app-navbar></app-navbar>      on it
+	*open:		 	angular material => components =>ToolBar
+	*Url(api)to:		app.module.ts =>import {MatToolbarModule} from '@angular/material/toolbar';
+	*Url(overview)to:	navbar.html  =><mat-toolbar><span>My Application</span></mat-toolbar>
+	
+	==>try either it is render or not 
+	*&Modify:		<mat-toolbar color="primary"><span>My App</span></mat-toolbar>
+---------------------/----------------------------
+3.Modification:
+3.1.in module.ts: import {MatToolbarModule} from '@angular/material/toolbar'; 
+		TO=>import {MatToolbarModule,MatButtonModule} from '@angular/material'; &import MatButtonModule
+
+3.2.in app.navbar.html: <mat-toolbar color="primary"><span>My App</span></mat-toolbar>  Tooooooooooo
+
+<mat-toolbar color="primary">
+    <span>My App</span>
+    	<div class="spacer"></div>
+	<a mat-butoon>Home</a>
+	<a mat-butoon>Service</a>
+	<a mat-butoon>Projects</a>
+	<a mat-butoon>About Us</a>
+	<a mat-raised-butoon color="accent">Home</a>
+</mat-toolbar>
+	
+4.app.compo.CSS: => .spacer{flex:1 1 auto;}

@@ -1,0 +1,195 @@
+Pip and Flask
+======//====
+First make sure: python Url and Pip Url are in environment
+----------------------------/-------------
+-create new folder
+-open vs code administrator mode
+-then open our folder using vs code
+-----------/------------
+-open terminal
+-pip inslatt virtualenv
+-python -m venv env
+-pip install Flask
+-create new py file (app.py) and paste the ff code
+---------/-----------
+from flask import Flask
+app= Flask(__name__)
+@app.route('/')
+
+def home():
+   
+    return 'Hello world'
+if __name__ == "__main__":
+    app.config['TEMPLATES_AUTO_RELOAD']=True
+    app.run(debug=True,use_reloader=True)
+
+run it:
+
+-----------------------------/-----------
+then: http://127.0.0.1:5000
+------------/------------------
+
+If you got problem:
+1. Pip: https://www.youtube.com/watch?v=An2UBGAlzpU
+2. Flask: https://www.youtube.com/watch?v=nres2NK2xlg
+--------------------------/---------------------
+Method1:
+===/===
+	- we can write anything at the place of Hello world 
+	-NB: '''     ''' for many lines
+Eg:
+--------------------------/---------------------
+from flask import Flask
+app= Flask(__name__)
+@app.route('/')
+
+def home():
+   
+    return '''<h1 >Hello world</h1>
+            <p>Hello world today</p>
+            <p>Hello world today</p>
+            <p>Hello world today</p>
+            <p>Hello world today</p>
+            '''
+if __name__ == "__main__":
+    app.config['TEMPLATES_AUTO_RELOAD']=True
+    app.run(debug=True,use_reloader=True)
+-------------------------/-----------------------
+Method2:Longway
+====/==
+-Create:folder (templates) 
+-Create:one html files (home.html and about.html)
+-change: from flask import Flask  => from flask import Flask , render_template
+-return 'Hello world' =>return render_template('home.html')
+----------------------/-------------
+home.html
+--/--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to home</h1>
+</body>
+</html>
+-----------------------/----------------
+about.html
+----/----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+</head>
+<body>
+   <h1>Welcome to About page</h1>
+</body>
+</html>
+----------------/------------
+
+Connection
+----/----
+from flask import Flask , render_template
+app= Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+if __name__ == "__main__":
+    app.config['TEMPLATES_AUTO_RELOAD']=True
+    app.run(debug=True,use_reloader=True)
+------------------------/------------
+Method2:Longway
+====/==
+Create: html file (base.html)
+------------/------------
+base.html
+---/---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title%} {%endblock%}</title>
+</head>
+<body>
+   <h1>{% block content%} {%endblock%}</h1>
+</body>
+</html>
+----------------------/---------------
+=>then the two long files become
+home.htlm
+===/==
+{%extends 'base.html'%}
+{% block title%}Home{%endblock%}
+{% block content%}Welcome to home{%endblock%}
+-----------------/------------
+about.html
+=====/===
+{%extends 'base.html'%}
+{% block title%}About{%endblock%}
+{% block content%}Welcome to about{%endblock%}
+----------------/---------------
+=>How to parse data from paret to child?
+  ------------------/---------------
+app.py
+===/==
+from flask import Flask , render_template
+app= Flask(__name__)
+
+student= {"fName":"Nega","lName":"Abebe","Gender":"M","Age":30}
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html', studentrec = student ) 
+
+if __name__ == "__main__":
+    app.config['TEMPLATES_AUTO_RELOAD']=True
+    app.run(debug=True,use_reloader=True)
+-------------------------/--------------
+about.html
+=====/====
+{%extends 'base.html'%}
+{% block title%}About{%endblock%}
+{% block content%}
+<h1>Welcome to about</h1>
+<h3>FName: {{studentrec.fName}}</h3>
+<h3>LName: {{studentrec.lName}}</h3>
+<h3>Gender: {{studentrec.Gender}}</h3>
+<h3>Age: {{studentrec.Age}}</h3>
+{%endblock%}
+-----------------------/----------------
+Navigation: we work on base.html
+====/====
+-Add: bootstrap link to base.html(bootstrap->getstarted)
+-Add:Navbar(bootstrap->getstarted->component->navbar->above-avaliable style)
+------------------------/-------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title%} {%endblock%}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="nav" style="background-color: black;">
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="{{url_for('about')}}">About</a>
+        <a class="nav-link" href="{{url_for('product')}}">Product</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </nav>
+   <h1>{% block content%} {%endblock%}</h1>
+</body>
+</html>
+--------------------------//------------------------
+
+
+
+
+   
